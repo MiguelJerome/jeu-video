@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+  
+
+<header class="header" id="header">
+        
+        <nav class="nav" id="nav"> 
+            
+                <ul>
+                    <div class="menu-main-choice" id="menu-main-choice">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+  <li>
+<button type="button" id ="dashboard" class="dashboard">User</button>
+</li>
+                
+                    <li>{{#if loggedIn}}
+                          
+                            <button id="logout" class="btn-no-style">Logout</button>
+                             
+        {{else}}
+        
+        <li>
+        <a href="/loginBack">Admin</a>
+        </li>
+        {{/if}}
+                    </li>
+
+                    </div>
+                </ul>
+            
+        </nav>
+        <div class ="name-lobby">
+        <h1><a href="/" id ="head-title">The Tech Blog</a></h1>
+        </div>
+    </header>
+
+    <main class = "home-main">
+      {{{ body }}}
+<ol class="post-list">
+  {{#each posts as |post|}}
+ 
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
+
+    </main>
+   
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+<script src="/javascript/dashboard.js"></script>
+
+</html>

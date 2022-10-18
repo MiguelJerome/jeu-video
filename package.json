@@ -1,0 +1,29 @@
+{
+  "name": "jeu-video",
+  "version": "1.0.0",
+  "description": "tournoi de jeu video",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Miguel Jerome, Synn Sloan Igondjo, Marc-Raphael Chehab, James Bell",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-router": "^0.0.1",
+    "helmet": "^6.0.0",
+    "path": "^0.12.7",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
